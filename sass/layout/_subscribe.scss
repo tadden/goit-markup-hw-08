@@ -1,0 +1,46 @@
+/* SUBSCRIBE */
+
+.subscribe {
+  margin-left: 93px;
+}
+
+.subscribe__block {
+  display: flex;
+}
+.subscribe__input {
+  margin-right: 12px;
+  padding-left: 16px;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: var(--address-clr);
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  background-color: transparent;
+  outline: transparent;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe__input:focus {
+  border-color: var(--accent-clr);
+}
+
+.subscribe__input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--address-clr);
+}
+.subscribe__icon {
+  margin-left: 10px;
+}
+.subscribe__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

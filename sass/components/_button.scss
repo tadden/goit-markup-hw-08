@@ -1,0 +1,20 @@
+/* BUTTON */
+
+.btn {
+  width: 200px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white-text);
+  background-color: var(--accent-clr);
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  /* В макете не указано */
+}

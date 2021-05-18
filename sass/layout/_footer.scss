@@ -1,0 +1,11 @@
+/* FOOTER */
+
+.footer {
+  padding: 60px 0;
+  background-color: var(--reverse-bgr);
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
