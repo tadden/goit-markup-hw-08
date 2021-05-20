@@ -19,7 +19,7 @@ body {
   color: var(--main-text-clr);
   background-color: var(--main-bgr);
   font-family: var(--main-font);
-  font-size: 14px;
+  font-size: 44px;
 }
 
 img {
@@ -65,23 +65,28 @@ a:hover, a:focus {
 }
 
 .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 150px;
+  padding-right: 150px;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
-  width: 480px;
+  .container {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  width: 768px;
+  .container {
+    width: 768px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  width: 1200px;
+  .container {
+    width: 1200px;
+  }
 }
 
 /* LOGO */
@@ -523,7 +528,7 @@ a:hover, a:focus {
 
 /* HERO */
 .hero {
-  max-width: 1900px;
+  max-width: 1200px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/overlay.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay.jpg);
   padding: 200px 0;

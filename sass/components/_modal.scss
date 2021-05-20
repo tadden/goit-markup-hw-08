@@ -156,7 +156,7 @@
   color: var(--alt-text-clr);
 }
 .checkbox:checked + .checkbox__label::before {
-  background-services: url(../images/icons/icon\check.svg);
+  background-image: url(../images/icons/icon\check.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--accent-clr);

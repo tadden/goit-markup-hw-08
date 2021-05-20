@@ -3,9 +3,11 @@
 .customers__list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
 
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
+}
 .customers__link {
   display: flex;
   align-items: center;
