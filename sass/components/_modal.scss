@@ -8,13 +8,16 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   overflow: auto;
+  z-index: 12;
+  opacity: 1;
+  overflow-y: scroll;
   transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
   opacity: 0;
-  visibility: visually-hidden;
+  visibility: hidden;
   pointer-events: none;
 }
 .visually-hidden .modal {
@@ -25,17 +28,26 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: calc(100% - 30px);
   max-width: 528px;
-  min-height: 581px;
+  max-height: calc(100% - 30px);
+
+  overflow-y: auto;
+
   background-color: var(--white-text);
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+  }
 }
 
-.modal__btn {
+.modal__btn-close {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,8 +62,8 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__btn:hover,
-.modal__btn:focus {
+.modal__btn-close:hover,
+.modal__btn-close:focus {
   fill: var(--accent-clr);
 }
 
@@ -122,7 +134,6 @@
 .input__comment {
   resize: none;
   padding: 12px 16px;
-  margin-bottom: 20px;
   min-height: 120px;
 }
 
@@ -150,14 +161,21 @@
 
 .checkbox__label {
   display: block;
-  margin-bottom: 30px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--alt-text-clr);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .checkbox:checked + .checkbox__label::before {
-  background-image: url(../images/icons/icon\check.svg);
+  background-image: url("../images/icons/icon-check.svg");
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--accent-clr);
   border-color: transparent;
